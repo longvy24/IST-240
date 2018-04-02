@@ -1,0 +1,21 @@
+<html>
+<script type="text/javascript">
+
+income = parseInt(prompt("Please enter your annual income: "));
+
+if (income <= 10000){
+	tax = income * .1
+	document.write ("Income: $" + income +  "<br>" + "Tax Rate: 10%" +  "<br>" + "Amount owed: $" + tax);
+} else if (income >= 10001 && income <= 40000){
+	tax = (income * .15) + 1000
+	document.write ("Income: " + income +  "<br>" + "Tax Rate: 15%" +  "<br>" + "Amount owed: " + tax);	
+} else if (income >= 40001 && income <= 200000){
+	tax = (income * .25) + 5500
+	document.write ("Income: " + income +  "<br>" + "Tax Rate: 25%" +  "<br>" + "Amount owed: " + tax);	
+}  else {
+	tax = (income * .40) + 45500
+	document.write ("Income: " + income + "<br>" + "Tax Rate: 40%" + "<br>" + "Amount owed: " + tax );
+}
+
+</script>
+</html>

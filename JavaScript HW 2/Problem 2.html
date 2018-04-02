@@ -1,0 +1,30 @@
+<html>
+<head></head>
+
+<body>
+<script type="text/javascript">
+
+e=0;
+o=0;
+
+do
+{
+	number = parseInt(prompt("Please enter a positive number: "));
+	
+	if(number%2==0 && number > 0)
+	{
+		e++;
+	}
+	else if(number%2!=0 && number > 0)
+	{
+		o++;
+	}
+
+}while(number != 0);
+
+	document.write("Evens: " + e + "<br>");
+	document.write("Odds: " + o + "<br>");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!--Question 1
+
+<html>
+<script type="text/javascript">
+value1 = 10;
+value2 = 11 - (3 + 2);
+document.write("value1 = " + value1 + ", value2 = " + value2 + "<br>");
+x = 44 / 2;
+y = 44 % 2;
+z = 44 % 3;
+document.write("x = " + x + ", y = " + y + ", z = " + z + "<br>");
+x = 2 * 3 * 4 * 5;
+document.write("x = " + x);
+</script>
+</html>
+
+Question 1 outputs
+document.write("value1 = " + value1 + ", value2 = " + value2 + "<br>");
+Output: value1 = 10, value2 = 6 “line break”
+
+document.write("x = " + x + ", y = " + y + ", z = " + z + "<br>");
+Output: x = 22, y = 0, z = 2
+
+document.write("x = " + x);
+Output: x = 120
+
+-->
+
+<!--
+<html>
+<script type="text/javascript">
+x = prompt("Enter a number", "");
+document.write("Triple " + x + " is " + (3 * x) + "<br>");
+document.write("Triple " + x + " is " + (x + x + x) + "<br>");
+x = parseFloat(x);
+document.write("Double " + x + " is " + (x + x));
+</script>
+</html>
+
+
+Question 2
+document.write("Triple " + x + " is " + (3 * x) + "<br>");
+Output: Triple 100 is 300 “line break”
+
+document.write("Triple " + x + " is " + (x + x + x) + “<br>”); 
+Output: Triple 100 is 100100100 [why?]
+
+document.write("Double " + x + " is " + (x + x));
+Output: Double 100 is 200
+
+-->

@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Magic 8-Ball</title>
+<script language="javascript">
+function shake()
+{ 
+
+	 switch(Math.floor(Math.random()*5))
+	 {
+		case 0:
+		answer = ("Yes definitely");
+		break;
+		case 1:
+		answer = ("No");
+		break;
+		case 2:
+		answer = ("Not So Sure");
+		break;
+		case 3:
+		answer = ("Don't Count on It");
+		break;
+		case 4:
+		answer =("Try Again Later")	 
+		break;
+	 } 
+	 
+	document.getElementById("cell_a").innerHTML = answer;   //displays answer in table	
+}
+</script>
+</head>
+
+
+<body style="font-family: Georgia; color:navy">
+ 
+<h1 style="text-align:center">This page simulates the Magic 8-Ball. Ask a question and then find the answer by clicking on the Ask! button below.</h1>
+<form name="frm1" action="javascript: void(0)" onsubmit="shake()">
+<table align=center border="1" width=250>
+   
+   <tr>
+   <td colspan=2 style="text-align: center"><img src="Magic8.jpg"></td>
+   </tr>
+   
+   <tr>
+   <td>Question:</td>
+   <td id="cell_q"><input type='text' name='quest' size=40/></td>
+   </tr>
+   
+   <tr>
+   <td>Answer:</td>
+   <td id="cell_a">&nbsp;</td>
+   </tr>
+
+   <tr>
+   <td colspan=2 style="text-align:center"><input type="submit" value="Ask!" /></td>
+   </tr>
+</table>
+
+
+</form>
+
+</body>
+</html>
