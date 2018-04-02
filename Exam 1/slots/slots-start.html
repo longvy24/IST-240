@@ -1,0 +1,145 @@
+<html>
+
+<head>
+<title>Nittany Slots</title>
+
+<style>
+.button {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+</style>
+
+<script type="text/javascript">
+
+function play(){
+// Start of random number game for slots
+	
+	left = Math.floor((Math.random()*4+1));
+	mid = Math.floor((Math.random()*4+1));
+	right = Math.floor((Math.random()*4+1));
+
+	if(left === mid && left === right)			//All matching
+	{
+		jackpot = 25;		
+		winnings = ("$" + jackpot);			
+	}
+	else if(left === mid || left === right || mid === right) // two matching
+	{
+		jackpot = 5;	
+		winnings = ("$" + jackpot);		
+	}
+	else
+	{
+		jackpot = 0;
+		winnings = ("$" + jackpot);
+	}	
+	
+	document.getElementById("win").innerHTML = winnings;
+
+		
+//	end random number for slots
+
+// Start picture rotation for slot images
+	
+	if(left == 1)
+	{
+	document.form1.s1.src="cherries.jpg";
+	}
+	else if (left == 2)
+	{
+	document.form1.s1.src="lemon.jpg";
+	}
+	else if (left == 3)
+	{
+	document.form1.s1.src="nlion.jpg";
+	}
+	else
+	{
+	document.form1.s1.src="seven.png";
+	}
+//---------------------------------------------------	
+	if(mid == 1)
+	{
+	document.form1.s2.src="cherries.jpg";
+	}
+	else if (mid == 2)
+	{
+	document.form1.s2.src="lemon.jpg";
+	}
+	else if (mid == 3)
+	{
+	document.form1.s2.src="nlion.jpg";
+	}
+	else
+	{
+	document.form1.s2.src="seven.png";
+	}
+//---------------------------------------------------	
+	if(right == 1)
+	{
+	document.form1.s3.src="cherries.jpg";
+	}
+	else if (right == 2)
+	{
+	document.form1.s3.src="lemon.jpg";
+	}
+	else if (right == 3)
+	{
+	document.form1.s3.src="nlion.jpg";
+	}
+	else
+	{
+	document.form1.s3.src="seven.png";
+	}	
+// End Slot images	
+}	
+
+</script>
+
+
+</head>
+
+
+<body style="font-family: Georgia; color:blue; background-color: #ccf7a6">
+
+<h1 style="text-align:center">Welcome to Nittany Slots.<br> Click the Play! button to play.</h1>
+
+<form name="form1" action="javascript: void(0)" >
+
+<table align=center border="1" width=615>
+
+   
+
+   <tr style="text-align:center; color: green" height=205>
+   <td id="s1"><img name = "s1" width=205 height=205 src="qmark.png"></td>
+   <td id="s2"><img name = "s2" width=205 height=205 src="qmark.png"></td>
+   <td id="s3"><img name = "s3" width=205 height=205 src="qmark.png"></td>
+   </tr>
+
+   <tr style="text-align:center">
+   <td height=50><span style="font-size: 20">Winnings</span></td>
+   <td colspan=3 id="win">&nbsp;</td>
+   </tr>
+
+   <tr>
+   <td colspan=3 height=50 style="text-align:center">
+   <input class="button" type="button" value="Play!" onclick="play()"></td>
+   </tr>
+
+</table>
+
+
+</form>
+
+</body>
+</html>
